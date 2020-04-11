@@ -17,6 +17,7 @@ dec edi       ; now edi points to end of string
 
 ; Делаем проверку, что строка 0 или 1 байт и идем в конец.
 
+
 @@:
 mov al, [esi] ; load characters
 mov [edi], al

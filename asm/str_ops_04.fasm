@@ -34,7 +34,7 @@ int 80h
 ;;;;;;;;;;;  move_data ;;;;;;;;;;;;;;;;
 move_data: 
 mov esi, str_in         ; Адрес источника - str_in
-mov edi, str_out        ; Адрес приемника - str_in
+mov edi, str_out        ; Адрес приемника - str_out
 ret
 
 OP_1:             ; переносим 4 байта напрямую

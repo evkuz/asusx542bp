@@ -22,7 +22,7 @@ loop @b
 
 movsb
 
-stosb
+;stosb
 call print_out
 call THE_END
 ;movsw
