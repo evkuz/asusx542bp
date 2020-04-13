@@ -11,9 +11,9 @@ mov ebx,f               ; ebx filename
 mov ecx,0x1b4           ; permissions value
 int 80h
 
+mov ebx,eax              ; file descriptor to ebx
 ;;;;;;;;;;;;; WRITE TO FILE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 mov eax, 0x04           ; write to file
-mov ebx,eax             ; file descriptor to ebx
 mov ecx,somedata        ; address of data 
 mov edx,sz              ; size (amount) of data
 int 80h

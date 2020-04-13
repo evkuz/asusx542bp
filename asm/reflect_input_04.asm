@@ -88,5 +88,5 @@ max_len db '255'
 msg4 db 'your string length is '
 msg4_sz = $ - msg4
 
-msg5 rb 5
-msg5_sz rb 1
+msg5 rb 5    ; 5 символов - строка, показывающая число
+msg5_sz rb 1 ; 1 байт - хранит длину строки. 255 символов хватит
