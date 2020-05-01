@@ -91,7 +91,7 @@ ret
 
 segment readable writeable
 str_in db 'abcd1234',0xA,0
-sz_abc db '8' ;= $ - str_in
+sz_abc = $ - str_in
 ;sz_abc rb 1
 ;zero_str db ''
 

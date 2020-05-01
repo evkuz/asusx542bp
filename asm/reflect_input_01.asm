@@ -68,7 +68,7 @@ str_len:
 	mov	eax,4
 	mov	ebx,1
 	mov	ecx,msg2
-	mov	edx,dword [msg2_sz]
+	mov	edx, dword [msg2_sz]
 	;так работает
 	;pop edx
 	int	0x80
@@ -86,7 +86,7 @@ msg1 db 'Enter some text : '
 msg1_size = $-msg1
 
 msg2 rb 255
-msg2_sz rb 4 ; резервируем 1 байт под значение длины
+msg2_sz rb 4 ; резервируем 4 байт под значение длины
 
 msg3 db 'you entered     : '
 msg3_sz = $ - msg3

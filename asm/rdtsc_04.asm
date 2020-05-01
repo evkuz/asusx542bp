@@ -3,6 +3,10 @@
 ; from the 64-bit MSR into the EDX and EAX registers. 
 ; The processor increments the time stamp counter MSR every clock cycle 
 ; and resets it to 0 whenever the processor is reset.
+;
+; rdtsc_04
+; Другой способ формирования адреса в esi (экономия в 3 байта)
+; смотрим на [esi+16/20/24/] 
 
 format ELF executable 3
 entry start
@@ -42,7 +46,7 @@ rdtsc ; get new values for ticks
     ;inc esi
 
     mov [esi+20], dword 0x12345678
-    mov [esi+24], dword 0xABCDEFBC
+    ;mov [esi+24], dword 0xABCDEFBC
 
 
 ;;; now esi has all data
@@ -71,7 +75,7 @@ segment readable writeable
 msg db 'Done!',0xA
 msg_size = $-msg
 
-f db 'rdtsc.bin',
+f db 'rdtsc.bin',0
 
 sz = 32
 somedata rb 32

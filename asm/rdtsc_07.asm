@@ -9,6 +9,12 @@
 ; Преобразовали эту разницу в строку
 ; Вывели строку.
 ;
+; rdtsc_06 
+; Убрал создание двоичного файла *.bin
+;
+; rdtsc_07 
+; Включаем serializig через rdscp
+;
 format ELF executable 3
 entry start
 
@@ -18,18 +24,10 @@ include 'int_2_str.inc'
 start:
 mov esi, somedata
 mov edi, d_val
-;;;;;;;;;;;;; CREATE FILE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-mov eax,0x08            ; create file
-mov ebx,f               ; ebx filename
-mov ecx,0x1b4           ; permissions value S_IRWXU
-int 80h
-; EAX=3 - file descriptor number ? Yeah
-;mov ebx,eax              ; file descriptor to ebx
-push eax ; store file descriptor
-rdtsc ;
+rdtscp ;
 	mov ebx,EAX
 	mov ecx,EDX 
-rdtsc ; get new values for ticks
+rdtscp ; get new values for ticks
     ;prepare string of data
     mov [esi],ecx
     mov [esi+4], ebx
@@ -44,22 +42,6 @@ rdtsc ; get new values for ticks
     call int_to_string
     mov [sz_d_val], dl
 
-;;; now esi has all data
-    ;; now write to file values
-pop ebx
-;;;;;;;;;;;;; WRITE TO FILE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-mov eax, 0x04           ; write to file
-;pop ebx
-mov ecx,somedata        ; address of data 
-mov edx,sz              ; size (amount) of data
-int 80h
-; -EFAULT	ecx is outside your accessible address space.
-
-;;;;;;;;;;;;; CLOSE FILE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-mov eax,06h            ; close file
-int 80h
-
-
 ;;;; output difference as string
   ; mov eax,4
   ; mov ebx,1
@@ -67,7 +49,7 @@ int 80h
   ; mov edx,sz_diff
   ; int 0x80
 
-   mov eax,4
+   mov  eax,4
    mov ebx,1
    mov ecx,d_val
    mov dl, [sz_d_val]

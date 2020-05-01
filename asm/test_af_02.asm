@@ -8,12 +8,13 @@ entry start
 segment readable executable
 
 start: 
-
+    
     xor eax,eax
-	mov cx, 0x0B
+	mov cx, 0x0B ; 0x0f -> 0x10
 @@:
 	inc cx
-    lahf     ; copies SF, ZF, AF, PF, and CF to bits 7, 6, 4, 2, and 0 of the AH register.
+    lahf     ; copies SF, ZF, AF, PF, and CF to bits 
+                    ;  7,  6,  4,  2, and 0 of the AH register.
     bt eax,12
     ;and ax, 0x1000
     ;cmp ax, 0x1000  ; Проверяем ZF, но не CF

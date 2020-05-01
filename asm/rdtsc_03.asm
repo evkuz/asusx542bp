@@ -3,7 +3,9 @@
 ; from the 64-bit MSR into the EDX and EAX registers. 
 ; The processor increments the time stamp counter MSR every clock cycle 
 ; and resets it to 0 whenever the processor is reset.
-
+; 
+; rdtsc_03
+; ТУт правильная запись данных в esi. Получаем двоичный файл в 32 байта.
 format ELF executable 3
 entry start
 
@@ -19,10 +21,10 @@ int 80h
 ; EAX=3 - file descriptor number ? Yeah
 ;mov ebx,eax              ; file descriptor to ebx
 push eax
-	rdtsc ;
+rdtsc ;
 	mov ebx,EAX
 	mov ecx,EDX 
-    rdtsc ; get new values for ticks
+rdtsc ; get new values for ticks
     ;prepare string of data
     mov [esi],ecx
     add esi, 4

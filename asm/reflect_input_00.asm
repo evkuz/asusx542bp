@@ -65,6 +65,7 @@ exit:
 	xor	ebx,ebx         ; exit code == 0
 	int	0x80            ; Вызов прерывания
 
+
 segment readable
 
 msg1 db 'Enter some text : '
@@ -72,7 +73,11 @@ msg1_size = $-msg1
 msg3 db 'you entered     : '
 msg3_sz = $ - msg3
 max_len db '255'
+
 segment writeable
 msg2 rb 255
 msg2_sz rb 1 ; резервируем 1 байт под значение длины
+
+
+
 

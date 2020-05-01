@@ -65,6 +65,7 @@ stos dword [es:edi]
 
 lodsw
 stosw
+
 mov eax, 0xA      ; Добавили \n в eax
 stosb             ; Добавили \n в строку
 
