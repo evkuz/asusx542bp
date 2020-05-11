@@ -1,6 +1,17 @@
 # asusx542bp
 # 09.04.2020 1st Save asm projects
 
+11.05.2020 Рабочий вариант. randomizer_param, matrix_mult_param уже принимают параметры.
+           randomizer_param <file size in bytes> 
+           matrix_mult_param <file size in bytes>\
+                             <matrix A rows number> 
+                             <matrix B coloumns number> 
+                             <matrix C coloumn number>
+
+           Последний параметр избыточен...
+
+
+
 06.05.2020 Назрела необходимость выделить qt проект duplicate в отдельный репозиторий, т.к. будут различные версии массива, 
            куда считывается файл данных для аналаиза.
            Фиксирую текущее состояние отдельным коммитом. Рабочий файл main.cpp 

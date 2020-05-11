@@ -1,5 +1,8 @@
 ;
-; Подсчитываем количество аргументов командной строки. т.е фактически количество опций вводимой команды
+; Выводим количество аргументов командной строки. т.е фактически количество опций вводимой команды
+; Выводим Первый аргумент
+; Выводим все остальные аргументы.
+; используем код arg_val.inc
 
 format ELF executable 3
 entry start
@@ -22,29 +25,13 @@ msg5 rb 255    ; 5 символов - строка, показывающая ч�
 msg5_sz db 1 ; 1 байт - хранит длину строки. 255 символов хватит
 
 
+
 segment readable writeable executable
 include 'int_2_str.inc'
+;include 'str_2_int.inc'
+include 'arg_val.inc'
 start:
 
-
-;	mov	eax,4
-;	mov	ebx,1
-;	mov	ecx,msg1
-;	mov	edx,msg1_size
-;	int	0x80
-
-; now read input
-;  mov eax, 3
-;  mov ebx, 0
-;  mov ecx, msg2
-;  mov edx, max_len
-;  int 0x80
-
-
-;push ebp
-;mov ebp, esp
-;mov eax, [esp +4]
-;mov ebx, [esp +8]
 
         push    ebp
         mov     ebp,esp
@@ -52,7 +39,7 @@ start:
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
         ;sub     ebx,1
         ;jz      usage
-
+        mov ecx, [ebp + 12]
 
   mov edi, msg5
 
@@ -63,10 +50,10 @@ start:
 
 
 call int_to_string
-    mov [msg5_sz], dl ; сохраняем длину строки, показывающей число
+mov [msg5_sz], dl ; сохраняем длину строки, показывающей число
 
- ;now reflect input 
-   ;1st print comment message
+;now reflect input 
+;1st print comment message
 	mov	eax,4
 	mov	ebx,1
 	mov	ecx,msg3
@@ -80,21 +67,12 @@ call int_to_string
     mov dl, [msg5_sz]
     int 80h
 ;;;;;;;;;;;;;;;;; Получаем значения аргументов
-  mov eax, [ebp + 12] ;1й аргумент
-  mov edi, msg5
+  ;mov eax, [ebp + 12] ;1й аргумент - адрес его строки
+  mov eax, [ebp + 12]
+  call get_arg_val
+  mov [msg5_sz], 3 ; сохраняем длину строки, показывающей число
 
-  call int_to_string
-  mov [msg5_sz], dl ; сохраняем длину строки, показывающей число
-
-
-	
-   ;next print input string itself
-	;mov	eax,4
-	;mov	ebx,1
-	;mov	ecx,msg2
-	;mov	dl,  [msg2_sz]
-	;int	0x80
-   
+  
    ;3rd print comment message for length
     mov eax,4
     mov ebx,1
@@ -102,10 +80,11 @@ call int_to_string
     mov edx,msg4_sz
     int 80h
 
+   ;pop edx
    ;4th print arguments value
     mov eax,4
     mov ebx,1
-    mov ecx,msg5
+    mov ecx, [ebp + 12] ;msg5
     mov dl, [msg5_sz]
     int 80h
 

@@ -12,7 +12,7 @@ include 'int_2_str.inc'
 start:
 
    mov edi, msg2
-   mov eax, 12568; 
+   mov eax, 0x3118; 12568; 
    call int_to_string ; integer to string
 
    mov [msg2_size], dl

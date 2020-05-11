@@ -1,13 +1,4 @@
 ; Создаем файл двоичных данных при помощи генератора случайных чисел
-; В случае, когда надо сгенерить файл большого размера, скажем 4млн. байт, результирующий
-; файл будет около 8 Мбайт., т.е. память резервируется в самом исполняемом файле, что не есть гуд.
-; Чтобы избежать большого размера программы при генерации больших матриц будем размер считывать как Ввод
-; пользователя.
-; 
-;
-;
-;
-
 
 format ELF executable 3
 entry start
@@ -18,13 +9,15 @@ FilePath db 'rnd_data.bin',0 ;
 hFile dd 0
 BytesRead dd 0
 BytesWritten dd 0
+Buffer      rb 40000        ;Размер файла Матрицы в байтах
+Buffer.size dd 40000    ;equ ($ - Buffer) ; Calculates the size at compile time
 NULL equ 0
 
 
 out_message db 'Some random value : %u',0
 bottom_edge    dd 0x0000003C
 top_edge    dd 0x7FFFFFFE    ; 4294967294 
-numElement  dd 0         ; Число СЛОВ (1/2/4 байта), записанных в файл
+numElement  dd 10000         ; Число СЛОВ (1/2/4 байта), записанных в файл
 counter     dd 0           ; счетчик цикла для случайных чисел
 ; Данные для генератора случайных чисел
 JJ      =       10             ; lag 1
@@ -36,38 +29,12 @@ randp1  dt      1.5            ; used for conversion to float
 p1      dd      0              ; pointer in circular buffer
 p2      dd      0              ; pointer in circular buffer
 randbuf dd      (2*KK) dup(?)  ; circular buffer
-;;;;; Резервируем под ВВод ползователя
-ustr db 255     ; Указатель на строку, введенную пользователем
-ustr_size db 1  ; Размер строки, введенной пользователем
-;;;;; Резервируем Данные для записи буферов
-Buffer.size rd 1    ;equ ($ - Buffer) ; Calculates the size at compile time
-Buffer      rd 100    ; Указатель на буфер, хранящий данные Матрицы, из него будет записан файл 
-
-
 
 
 
 ;section '.code' code readable executable
 segment readable executable
 start:
-
-;;;;;;;;;;; Считываем ввод пльзователя - это 1 параметр - размер файла в байтах.
-  mov eax, 3
-  mov ebx, 0
-  mov ecx, ustr
-  mov edx, ustr_size
-  int 0x80
-
-; По завершении системного вызова Чтение имеем в регистре eax длину строки, 
-; веденную пользователем.
-; Поэтому сразу сохраняем эту длину здесь.
-mov [msg2_sz], byte al
-
-call int_to_string
-    mov [msg5_sz], dl ; сохраняем длину строки, показывающей число
-
-;;;;;;;;;;; Преобразуем ввод пользователя в число
-
         ; Инициализация генератора случайных чисел
         ;invoke  GetTickCount 
         ; rdtsc loads the current value of the processor's time stamp counter 
@@ -116,10 +83,31 @@ int 80h
 mov eax,06h            ; close file
 int 80h
 
+
+;            invoke CreateFileA,FilePath,GENERIC_WRITE,NULL,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL 
+;            mov [hFile],eax
+            ; write Buffer.size byte from Buffer to the file; actual bytes written put into BytesWritten
+;            invoke WriteFile,[hFile],Buffer,[Buffer.size],[BytesWritten],NULL 
+;            invoke CloseHandle,[hFile] ; done
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;            mov eax, Buffer
+;            add eax, 8
+
+;            push dword [eax]
+;            push out_message
+;            call [printf]        ; Выводим в консоль значение, сохраненное в  EAX.
+
+
+
+;call [ExitProcess] ; Go back to the calling procedure (system, whatever)
 ; now exit 
     mov eax,1           ; sys_exit
     xor ebx,ebx         ; exit code == 0
     int 0x80            ; Вызов прерывания
+
+
 
 ;---------------------------------------------
 ; Получить случайное число
