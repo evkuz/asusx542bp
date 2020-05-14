@@ -1,11 +1,16 @@
 ; /opt/devtools/include/symbols.inc
 ; alloc_mmap.fasm
 ; allocate memory using syscall 90 <==> mmap
+; 
+; http://man7.org/linux/man-pages/man2/mmap.2.html
 ;
 ; ROT_READ        equ 0x1
 ; PROT_WRITE      equ 0x2
 ; PROT_EXEC       equ 0x4
 ; MAP_ANON        equ 0x20
+; MAP_SHARED      equ 0x1
+; MAP_PRIVATE     equ 0x2
+
 
 ;declare
 
@@ -41,14 +46,15 @@ start:
 ;
 ;memdata mmap_arg_struct 0, [sz], mode, fl, con, offt
 
+
 mov edi, mystr
 xor eax,eax
 stosd
-mov eax, 0x2710
+mov eax, 0x2710  ; len = size = 10000 bytes
 stosd
-mov eax, 3
+mov eax, 3   ; PROT_READ | PROT_WRITE
 stosd
-mov eax, 0x22
+mov eax, 0x21; MAP_PRIVATE | MAP_ANONYMOUS
 stosd
 mov eax, -1
 stosd
@@ -61,9 +67,11 @@ int 80h
 
 mov [buf], eax 
 
-
-
-
+; now make unmap
+mov eax, 91
+mov ebx, [buf]
+mov ecx, 0x2710
+int 0x80            ; Вызов прерывания
 
 
 exit: 

@@ -1,0 +1,65 @@
+; experimental template
+
+format ELF executable 3
+entry start
+
+
+segment readable executable
+
+start:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; BEXTR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+mov eax, 0          ; dst
+mov ecx, 0xabcdef01 ; 1st Source
+mov edx, 0x0000070d ; 7 бит из позиции 13 для числа 0xabcdef01
+                    ; Bit 7:0 specifies the starting bit position of bit extraction.
+                    ; Bit 15:8 specifies the maximum number of bits (LENGTH)
+				    ; beginning at the START position to extract
+;bextr dst, start, len
+ bextr eax, ecx, edx  ; EAX = 0x6f
+ ; ecx = 0xabcdef01
+ ; edx = 0x0000070d == 7 бит из позиции 13(d) для числа 0xabcdef01
+ ; result = b'110 1111 = 0x6f
+ ;
+ ; Operation
+ ; START ← SRC2[7:0];
+ ; LEN ← SRC2[15:8];
+ ; TEMP ← ZERO_EXTEND_TO_512 (SRC1 );
+ ; DEST ← ZERO_EXTEND(TEMP[START+LEN -1: START]);
+ ; ZF ← (DEST = 0);
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; BLSI ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	mov eax, 0xabcd7abc
+	mov ecx, 0xabcd8000
+    blsi eax, ecx    ; EAX = 0x00008000
+    ; Извлекает младший установленный бит из src и устанавливает соответствущий (по позиции) 
+    ; бит в dst. Все остальные биты в dst обнуляются. Если в источнике нет установленных бит,
+    ; то приемник ВЕСЬ обнуляется и устанавливаются флаги ZF, CF.
+
+    ;Operation
+    ;temp ← (-SRC) bitwiseAND (SRC);
+	;SF ← temp[OperandSize -1];
+	;ZF ← (temp = 0);
+	;IF SRC = 0
+	;CF ← 0;
+	;ELSE
+	;CF ← 1;
+	;FI
+	;DEST ← temp;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; BLSMSK ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    mov eax, 0xabcd8022
+    mov ecx, 0xabcd0100
+    BLSMSK eax, ecx     ; EAX = 0x000001ff
+    ;Устанавливает младшие биты в dst в 1 вплоть до, и включая, позиции младшего 
+    ;установленного в 1 в src. Остальные биты dst обнуляет.
+ 
+	mov eax, 1
+	mov ebx, 42
+;	sub ebx, 29
+	int 0x80      
+
+; в терминале вводим: 
+; ./simple
+; echo $?
+; Получаем вывод 42 - наш код возврата из ebx

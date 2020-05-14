@@ -23,9 +23,9 @@ entry start
 segment readable writeable
 
 
-FilePath_A db 'data_AA.bin',0 ; Файл с данными матрицы А
-FilePath_B db 'data_BB.bin',0 ; Файл с данными матрицы В
-FilePath_C db 'data_CC.bin',0 ; Файл с данными матрицы C
+FilePath_A db 'data_A.bin',0 ; Файл с данными матрицы А
+FilePath_B db 'data_B.bin',0 ; Файл с данными матрицы В
+FilePath_C db 'data_C.bin',0 ; Файл с данными матрицы C
 
 wrong_count_mess db 'This utility gets only 4 arguments - size of file in bytes'
 wr_sz = $ - wrong_count_mess
@@ -299,7 +299,8 @@ MatrixC:
           mov [mxAcol], 0 ; индекс стоблца в матрице А Обнуляем
           mov [mxBrow], 0    ; индекс строки в матрице В Обнуляем
 
-          
+          pop eax ;;;;;;;;;;;;; avoid stack overflow 
+
           push 0             ; ОБнуляем в стеке сумму элементов
 
           inc [mxCind]      ; начинаем новый столбец итоговой матрицы.

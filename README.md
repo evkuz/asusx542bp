@@ -1,14 +1,16 @@
 # asusx542bp
 # 09.04.2020 1st Save asm projects
 
+14.05.2020 Начал fasm-примеры BMI инструкций. Поправил предыдущее. 
+
 11.05.2020 Рабочий вариант. randomizer_param, matrix_mult_param уже принимают параметры.
            randomizer_param <file size in bytes> 
            matrix_mult_param <file size in bytes>\
-                             <matrix A rows number> 
-                             <matrix B coloumns number> 
-                             <matrix C coloumn number>
+                             <matrix A rows number>\
+                             <matrix B coloumns number>\ 
+                             <matrix C coloumns number>
 
-           Последний параметр избыточен...
+           Последний параметр избыточен... ибо может вычисляться из предыдущих параметров, но добавляет наглядности при вводе команды.
 
 
 
