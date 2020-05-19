@@ -1,7 +1,16 @@
 ;
 ; - Выводим количество аргументов командной строки. т.е фактически количество опций вводимой команды
-; - Выводим Первый аргумент
-; - Выделяем память под массив данных (буфер), копируем туда данные, записываем буфер в файл.
+; - Выводим Первый аргумент - размер файла в байтах
+; - Выделяем память под массив данных (буфер) в размере,
+;   заданном 1-ым аргументов
+; - копируем данные в буфер(генерим в цикле)
+; - записываем буфер в файл.
+; - описание системных вызовов https://fresh.flatassembler.net/lscr/
+; - Значение флагов берем тут /opt/devtools/include/symbols.inc
+; - Полное описанипе флагов mmap тут http://man7.org/linux/man-pages/man2/mmap.2.html
+; - гуглим mmap linux
+
+
 
 format ELF executable 3
 entry start
@@ -13,24 +22,6 @@ include 'str_2_int.inc'
 start:
 
 
-;	mov	eax,4
-;	mov	ebx,1
-;	mov	ecx,msg1
-;	mov	edx,msg1_size
-;	int	0x80
-
-; now read input
-;  mov eax, 3
-;  mov ebx, 0
-;  mov ecx, msg2
-;  mov edx, max_len
-;  int 0x80
-
-
-;push ebp
-;mov ebp, esp
-;mov eax, [esp +4]
-;mov ebx, [esp +8]
 
         push    ebp
         mov     ebp,esp
@@ -38,23 +29,15 @@ start:
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
 
         mov esi, [ebp + 12]
-        ;sub     ebx,1
-        ;jz      usage
 
 
-  mov edi, msg5
+  mov edi, msg5; строка хранит число аргументов в текстовом виде
 
-; По завершении системного вызова Чтение имеем в регистре eax длину строки, 
-; веденную пользователем.
-; Поэтому сразу сохраняем эту длину здесь.
-;mov [msg2_sz], byte al
-
-
+;Переводим число аргументов в строку
 call int_to_string
     mov [msg5_sz], dl ; сохраняем длину строки, показывающей число
 
- ;now reflect input 
-   ;1st print comment message
+  ;1st print comment message
 	mov	eax,4
 	mov	ebx,1
 	mov	ecx,msg3
@@ -68,9 +51,8 @@ call int_to_string
     mov dl, [msg5_sz]
     int 80h
 ;;;;;;;;;;;;;;;;; Получаем значения аргументов
-  ;mov eax, [ebp + 12] ;1й аргумент - адрес его строки
-  mov esi, [ebp + 12]
-  mov ecx, -1 ; счетчик цикла по полной
+  mov esi, [ebp + 12]  ;1й аргумент - адрес его строки
+  mov ecx, -1 ; счетчик цикла минус 1
   ;получаем длину строки
   ;для этого сканируем пока не получим нулевой байт.
 
@@ -99,49 +81,53 @@ call int_to_string
     mov dl, [msg5_sz]
     int 80h
 
-
-
-; определяем длину строки агрумента
-; но КАК ???
-  ;pop ecx
+  ; переводим строку в число
   mov ecx, edx
   call str_2_int
   ; получили в eax значене аргумента
   ; в нашем случае это размер файла, в байтах
   mov [buf_sz], eax
   
-  ; выделяем память заданного размера.
-mov edi, mystr
+; ROT_READ        equ 0x1
+; PROT_WRITE      equ 0x2
+; PROT_EXEC       equ 0x4
+; MAP_ANON        equ 0x20
+; MAP_SHARED      equ 0x1
+; MAP_PRIVATE     equ 0x2
+
+; выделяем память заданного размера.
+mov edi, mystr  ; строка из edi будет хранить данные структуры mmap_arg_struct
 xor eax,eax
+stosd              ; addr == 0
+mov eax, [buf_sz]  ; len ==значение 1-го аргумента
 stosd
-mov eax, [buf_sz]; 0x2710
+mov eax, 3         ; prot == PROT_READ(==0x01) || PROT_WRITE(==0x02)
 stosd
-mov eax, 3
-stosd
-mov eax, 0x22
+mov eax, 0x22      ; flags == MAP_ANON(== 0x20) || MAP_PRIVATE(==0x02)
 
 stosd
-mov eax, -1
+mov eax, -1        ; fd == (-1), т.к. мы не связываем файл с буфером
 stosd
-mov eax, 0
+mov eax, 0         ; offset == 0, стартуем с начала буфера
 stosd
 
 mov eax,90
 mov ebx, mystr
 int 80h
-; По завершении вызова получаем в eax указатель на область памяти заданного размера.
+; По завершении вызова получаем в eax указатель на область
+; памяти заданного размера.
 mov [buf], eax
 mov ecx, [buf_sz]  ; задаем счетчик циклов
-shr ecx, 2         ; делим на 4
+shr ecx, 2         ; делим на 4, получаем число элементов
 
 mov ebx, [buf]       ; записываем начало массива
-mov eax, [counter] ; задаем начальное значене счетчика циклов
+mov eax, [counter]   ; задаем начальное значене счетчика циклов
 @@:
 
   
-  mov [ebx], eax     ; записали по новому адресу новое значение
+  mov [ebx], eax     ; записали по новому адресу новое значение (пусть будет счетчик)
   add eax, 4         ; увеличили адрес на 4 байта (следующее значение counter)
-  add ebx, 4 ; добавили смещение, увеличили адрес
+  add ebx, 4         ; добавили смещение, увеличили адрес
   loop @b
 
 
@@ -163,18 +149,11 @@ mov eax,06h            ; close file
 int 80h
 
 
-
-
-
-   ;next print input string itself
-	;mov	eax,4
-	;mov	ebx,1
-	;mov	ecx,msg2
-	;mov	dl,  [msg2_sz]
-	;int	0x80
-   
-
-
+; now make unmap
+mov eax, 91
+mov ebx, [buf]
+mov ecx, [buf_sz] ; size
+int 0x80            ; Вызов прерывания
 
 exit:
 

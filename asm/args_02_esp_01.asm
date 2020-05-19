@@ -29,9 +29,9 @@ include 'int_2_str.inc'
 include 'str_2_int.inc'
 start:
 
-        push    ebp
-        mov     ebp,esp
-        mov     eax,[ebp+4]     ;argc
+;        push    ebp
+;        mov     ebp,esp
+        mov     eax,[esp]     ;argc
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
 
   mov edi, msg5 ; строка хранит число аргументов в текстовом виде
@@ -55,7 +55,7 @@ call int_to_string
     int 80h
 ;;;;;;;;;;;;;;;;; Получаем значения аргументов
   ;mov eax, [ebp + 12] 
-  mov esi, [ebp + 12]  ;1й аргумент - адрес его строки
+  mov esi, [esp + 8]  ;1й аргумент - адрес его строки
   mov ecx, -1 ; счетчик цикла по полной
   ;получаем длину строки
   ;для этого сканируем пока не получим нулевой байт.
@@ -66,7 +66,7 @@ call int_to_string
      cmp al, 0
      jne strlen
 ; Вот теперь получили длину и начинаем перевод в число
-  mov esi, [ebp + 12]  ; адрес строки
+  mov esi, [esp + 8]  ; адрес строки
   push ecx             ; длина строки уже в ecx, сохраняем для последующего вывода
 
 ; Переводим строку в число, т.к. знаем, что это число.
@@ -83,7 +83,7 @@ call int_to_string
     int 80h
 
    pop edx
-   mov esi, [ebp + 12]  ; адрес строки
+   mov esi, [esp + 8]  ; адрес строки
    ;4th print arguments value
     mov eax,4
     mov ebx,1

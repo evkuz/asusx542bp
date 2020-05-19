@@ -1,10 +1,8 @@
 ;
 ; Выводим количество аргументов командной строки. т.е фактически количество опций вводимой команды
 ; Выводим Первый аргумент
-; 
-; используем код arg_val.inc неточность кода в том, что длина строки
-; выводящей значение аргумента, задана "руками" - 3 символа, а не вычисляется в коде.
-; см. стр. 76
+; Выводим все остальные аргументы.
+; используем код arg_val.inc
 
 format ELF executable 3
 entry start
@@ -35,13 +33,13 @@ include 'arg_val.inc'
 start:
 
 
-        push    ebp
-        mov     ebp,esp
-        mov     eax,[ebp+4]     ;argc
+;        push    ebp
+;        mov     ebp,esp
+        mov     eax,[esp]     ;argc
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
         ;sub     ebx,1
         ;jz      usage
-        mov ecx, [ebp + 12]
+        mov ecx, [esp + 8]
 
   mov edi, msg5
 
@@ -68,13 +66,14 @@ mov [msg5_sz], dl ; сохраняем длину строки, показыва
     mov ecx,msg5
     mov dl, [msg5_sz]
     int 80h
-
-
 ;;;;;;;;;;;;;;;;; Получаем значения аргументов
-  mov eax, [ebp + 12]  ;1й аргумент - адрес его строки
+  ;mov eax, [ebp + 12] ;1й аргумент - адрес его строки
+  mov eax, [esp + 8]
   call get_arg_val
-  mov [msg5_sz], 3 ; сохраняем длину строки, показывающей число
+  mov [msg5_sz], cl ; сохраняем длину строки, показывающей число
 
+  ;push eax
+  ;pop ecx
   
    ;3rd print comment message for length
     mov eax,4
@@ -87,7 +86,7 @@ mov [msg5_sz], dl ; сохраняем длину строки, показыва
    ;4th print arguments value
     mov eax,4
     mov ebx,1
-    mov ecx, [ebp + 12] ;msg5
+    mov ecx, [esp + 8] ;msg5
     mov dl, [msg5_sz]
     int 80h
 

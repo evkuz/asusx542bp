@@ -163,6 +163,8 @@ int 80h
 mov eax,06h            ; close file
 int 80h
 
+; А где освобождение памяти ???!!!
+
 exit: 
     mov eax,1           ; sys_exit
     xor ebx,ebx         ; exit code == 0

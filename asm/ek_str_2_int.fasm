@@ -14,8 +14,8 @@ include 'str_2_int.inc'
 
 start:
 
-		mov esi, arg01
-		mov ecx, 4
+		mov esi, arg01   ; адрес строки
+		mov ecx, 4       ; длина строки
 		call str_2_int
 
 		nop

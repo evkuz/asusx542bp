@@ -70,7 +70,7 @@ mov [buf], eax
 ; now make unmap
 mov eax, 91
 mov ebx, [buf]
-mov ecx, 0x2710
+mov ecx, 0x2710 ; size
 int 0x80            ; Вызов прерывания
 
 
