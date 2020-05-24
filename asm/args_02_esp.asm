@@ -16,7 +16,7 @@ msg3 db 'your arguments number is     : '
 msg3_sz = $ - msg3
 max_len db '255'
 
-msg4 db 'your arguments are : '
+msg4 db 'your only 1 argument is  : '
 msg4_sz = $ - msg4
 
 msg5 rb 255    ; 5 символов - строка, показывающая число
@@ -72,7 +72,7 @@ call int_to_string
 ; Переводим строку в число, т.к. знаем, что это число.
   call str_2_int
   ; получили в eax значене аргумента
-  mov [msg5_sz], 1 ; сохраняем длину строки, показывающей число
+  ;mov [msg5_sz], 1 ; сохраняем длину строки, показывающей число
 
 
    ;3rd print comment message for length

@@ -16,7 +16,7 @@ msg3 db 'your arguments number is     : '
 msg3_sz = $ - msg3
 max_len db '255'
 
-msg4 db 'your arguments are : '
+msg4 db 'your 1st argument is  : '
 msg4_sz = $ - msg4
 
 msg5 rb 255    ; 5 символов - строка, показывающая число
@@ -31,7 +31,7 @@ start:
 
         push    ebp
         mov     ebp,esp
-        mov     eax,[ebp+4]     ;argc
+        mov     eax,[ebp + 4]     ;argc
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
 
   mov edi, msg5 ; строка хранит число аргументов в текстовом виде
@@ -54,7 +54,6 @@ call int_to_string
     mov dl, [msg5_sz]
     int 80h
 ;;;;;;;;;;;;;;;;; Получаем значения аргументов
-  ;mov eax, [ebp + 12] 
   mov esi, [ebp + 12]  ;1й аргумент - адрес его строки
   mov ecx, -1 ; счетчик цикла по полной
   ;получаем длину строки
@@ -72,7 +71,7 @@ call int_to_string
 ; Переводим строку в число, т.к. знаем, что это число.
   call str_2_int
   ; получили в eax значене аргумента
-  mov [msg5_sz], 1 ; сохраняем длину строки, показывающей число
+  ;mov [msg5_sz], 1 ; сохраняем длину строки, показывающей число
 
 
    ;3rd print comment message for length

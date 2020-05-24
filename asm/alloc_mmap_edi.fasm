@@ -48,17 +48,17 @@ start:
 
 
 mov edi, mystr
-xor eax,eax
+xor eax,eax      ; addr
 stosd
 mov eax, 0x2710  ; len = size = 10000 bytes
 stosd
-mov eax, 3   ; PROT_READ | PROT_WRITE
+mov eax, 3   ; PROT_READ ==1 | PROT_WRITE ==2
 stosd
-mov eax, 0x21; MAP_PRIVATE | MAP_ANONYMOUS
+mov eax, 0x21; MAP_SHARED ==1 | MAP_ANONYMOUS == 0x20
 stosd
-mov eax, -1
+mov eax, -1  ; file descriptor
 stosd
-mov eax, 0
+mov eax, 0   ; offset 
 stosd
 
 mov eax,90

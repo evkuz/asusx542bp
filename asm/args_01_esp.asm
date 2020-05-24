@@ -28,9 +28,10 @@ include 'int_2_str.inc'
 start:
 
 
-        push    ebp
-        mov     ebp,esp
-        mov     eax,[ebp + 4]     ;argc
+
+;        push    ebp
+;        mov     ebp,esp
+        mov     eax,[esp]     ;argc
         dec eax                 ; (-1) as there is "path" argument in addition to user arguments
 
   mov edi, msg5
