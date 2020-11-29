@@ -35,13 +35,14 @@ int main(int argc, char *argv[])
 
 
     fname = A_fpath;
-    numBytes = gen_sample(fname, mybuffer_A, 20);
+    numBytes = gen_sample(fname, mybuffer_A, sizeof(mybuffer_A)/4);
     fname = B_fpath;
-    numBytes += gen_sample(fname, mybuffer_B, 15);
+    numBytes += gen_sample(fname, mybuffer_B, sizeof(mybuffer_B)/4);
 return 0;
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+// ВНИМАНИЕ ! размер буфера (аргумент #3) передается в quint32
+// Т.е. не в байтах, а в dword-элементах по 4 байта.
 int gen_sample (QString fname, quint32 *databuf, quint32 buf_sz)
 {
     QFile   mfile;

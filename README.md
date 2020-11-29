@@ -1,6 +1,9 @@
 # asusx542bp
 # 09.04.2020 1st Save asm projects
 
+29.11.2020 PycharmProjects/ проекты по парсингу json-файлов
+           router_reboot - перегрузка домашнего роутера using selenium.webdriver
+
 24.05.2020 qt_projects/generate_sample_mx генерит сразу обе матрицы А и В разного размера для проверки 
            перемножения. ОТкрытие, запись файла выделено в отдельную ф-цию. В main только вызов этой ф-ции.
   

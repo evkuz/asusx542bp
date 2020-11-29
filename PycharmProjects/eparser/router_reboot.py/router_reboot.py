@@ -1,0 +1,1 @@
+<input id="restartB" value="Перезагрузка" class="button button-blank" type="button">
