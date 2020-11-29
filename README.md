@@ -1,6 +1,9 @@
 # asusx542bp
 # 09.04.2020 1st Save asm projects
 
+29.11.2020 Добавил в .gitignore qt и fasm файлы и они стали отображаться в git status как deleted
+           Сделал комит и в репозитории эти файлы пропали... 
+
 29.11.2020 PycharmProjects/ проекты по парсингу json-файлов
            router_reboot - перегрузка домашнего роутера using selenium.webdriver
 
