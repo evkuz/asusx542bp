@@ -1,4 +1,5 @@
 asm/*.txt
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/
 
 edb-debugger/
 cad/
@@ -9,7 +10,6 @@ fasm_examples/
 idefasm/
 openhantek/
 
-qtprojects/
 qucs-0.0.20/
 snap/
 syscall/
@@ -17,9 +17,80 @@ tmp/
 uni/
 vidproj/
 
+qtprojects/*.bin
+qtprojects/Makefile
 
+#++++++++++++++++++++++++
+qtprojects/repair_data_files/debug/Makefile
+qtprojects/repair_data_files/Makefile
+qtprojects/duplicate/Makefile
+qtprojects/Asm_Matrix_multiply/debug/Makefile
+qtprojects/Asm_Matrix_multiply/Makefile
+qtprojects/generate_sample_mx/Makefile
+qtprojects/file_wr_dword/debug/Makefile
+qtprojects/file_wr_dword/release/Makefile
+qtprojects/file_wr_dword/Makefile
+qtprojects/KK_Tab_15_start_acquisition/Makefile
+qtprojects/check_KK_files_01/Makefile
+qtprojects/qq_duplicate/qt_duplicate/Makefile
+qtprojects/Asm_ptr/Makefile
+qtprojects/check_consistency/Makefile
+qtprojects/qt_duplicate/Makefile
 
+qtprojects/repair_data_files/Makefile.Debug
+qtprojects/repair_data_files/debug/Makefile.Debug
+qtprojects/Asm_Matrix_multiply/Makefile.Debug
+qtprojects/Asm_Matrix_multiply/debug/Makefile.Debug
+qtprojects/KK_Tab_15_start_acquisition/Makefile.Debug
+qtprojects/check_KK_files_01/Makefile.Debug
+qtprojects/Asm_ptr/Makefile.Debug
+qtprojects/check_consistency/Makefile.Debug
 
+qtprojects/repair_data_files/debug/Makefile.Release
+qtprojects/repair_data_files/Makefile.Release
+qtprojects/Asm_Matrix_multiply/debug/Makefile.Release
+qtprojects/Asm_Matrix_multiply/Makefile.Release
+qtprojects/KK_Tab_15_start_acquisition/Makefile.Release
+qtprojects/check_KK_files_01/Makefile.Release
+qtprojects/Asm_ptr/Makefile.Release
+qtprojects/check_consistency/Makefile.Release
+#++++++++++++++++++++++++
+qtprojects/repair_data_files/debug/release
+qtprojects/repair_data_files/release
+qtprojects/Asm_Matrix_multiply/debug/release
+qtprojects/Asm_Matrix_multiply/release
+qtprojects/file_wr_dword/release
+qtprojects/KK_Tab_15_start_acquisition/release
+qtprojects/check_KK_files_01/release
+qtprojects/Asm_ptr/release
+qtprojects/check_consistency/release
+#++++++++++++++++++++++++
+qtprojects/repair_data_files/Camac_Thread_data_002.bin
+qtprojects/repair_data_files/Camac_Thread_data_003.bin
+qtprojects/repair_data_files/Camac_Thread_data_001.bin
+qtprojects/repair_data_files/Camac_Thread_data_000.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/4000/data_A.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/4000/data_B.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/4000000/data_A.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/4000000/data_B.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/400000/data_A.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/400000/data_B.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/40000/data_A.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/40000/data_B.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/400/data_A.bin
+qtprojects/Asm_Matrix_multiply/Source_Matrixes/400/data_B.bin
+qtprojects/Asm_Matrix_multiply/data_A.bin
+qtprojects/Asm_Matrix_multiply/data_C.bin
+qtprojects/Asm_Matrix_multiply/data_B.bin
+qtprojects/generate_sample_mx/A_sample_data.bin
+qtprojects/generate_sample_mx/B_sample_data.bin
+qtprojects/file_wr_dword/data.bin
+qtprojects/file_wr_dword/release/data.bin
+qtprojects/KK_Tab_15_start_acquisition/Camac_data_000.bin
+qtprojects/KK_Tab_15_start_acquisition/release/Camac_Thread_data_000.bin
+qtprojects/KK_Tab_15_start_acquisition/Camac_Thread_data_001.bin
+qtprojects/KK_Tab_15_start_acquisition/Camac_Thread_data_000.bin
+#++++++++++++++++++++++++
 .FreeCAD/
 .ICEauthority
 .apport-ignore.xml
