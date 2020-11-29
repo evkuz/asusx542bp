@@ -1,3 +1,5 @@
+asm/*.txt
+
 edb-debugger/
 cad/
 coding/
@@ -66,7 +68,7 @@ PycharmProjects/coursera/
 PycharmProjects/eparser/.idea/
 
 
-
+PycharmProjects/chromedriver
 PycharmProjects/eparser/venv
 PycharmProjects/eparser/venv/lib/
 PycharmProjects/eparser/venv/lib/python3.6/
