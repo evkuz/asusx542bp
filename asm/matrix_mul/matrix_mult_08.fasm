@@ -62,7 +62,7 @@ result  rd 100000000     ; Массив с элементами новой ма�
 ;---------------------------------------------
 segment readable executable
 ;section '.code' code readable executable
-include '/home/evkuz/asm/int_2_str.inc'
+include 'int_2_str.inc'
   start:
       push ebp
       mov  ebp, esp
