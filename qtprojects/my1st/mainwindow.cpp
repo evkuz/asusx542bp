@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <ekgym.h>
+//#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,9 +22,10 @@ void MainWindow::on_my1st_button_clicked()
 {
     ui->my1st_button->setText("Hello World !");
     QString info = getCPUID();
-    ui->textEdit->setText(info);
+    int pullups = pullups_stair(5);
+    ui->textEdit->setText("The CPU ID is "+info+" pullups "+QString::number(pullups));
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++
 QString MainWindow::getCPUID()
 {
     QString CPUID;

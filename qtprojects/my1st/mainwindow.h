@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <ekgym.h>
 
 namespace Ui {
 class MainWindow;

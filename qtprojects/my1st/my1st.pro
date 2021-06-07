@@ -32,3 +32,11 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+# int pullups = pullups_stair(5);
+
+
+unix:!macx: LIBS += -L$$PWD/../eklib/ -lekgym
+
+INCLUDEPATH += $$PWD/../eklib
+DEPENDPATH += $$PWD/../eklib
