@@ -1,0 +1,469 @@
+Start checking file consistency 
+Current file name is  "/home/evkuz/asm/matrix_mul/rnd_data.bin" and size of  4000000  bytes
+Found duplicate value    "383F103E"
+1st occurrence offset is  2624 next occurrence offset is  1050480
+Found duplicate value    "24B5F419"
+1st occurrence offset is  8932 next occurrence offset is  3230104
+Found duplicate value    "68B24B20"
+1st occurrence offset is  19192 next occurrence offset is  3203608
+Found duplicate value    "14239662"
+1st occurrence offset is  24784 next occurrence offset is  3848196
+Found duplicate value    "EABF5328"
+1st occurrence offset is  25624 next occurrence offset is  3829076
+Found duplicate value    "26DB2126"
+1st occurrence offset is  32140 next occurrence offset is  3157936
+Found duplicate value    "C531BE4F"
+1st occurrence offset is  33096 next occurrence offset is  3855596
+Found duplicate value    "BE0BDF3C"
+1st occurrence offset is  35888 next occurrence offset is  2728668
+Found duplicate value    "96680B5D"
+1st occurrence offset is  39060 next occurrence offset is  1215112
+Found duplicate value    "02FB967A"
+1st occurrence offset is  58300 next occurrence offset is  2610508
+Found duplicate value    "3940DF3F"
+1st occurrence offset is  61496 next occurrence offset is  990868
+Found duplicate value    "651CF219"
+1st occurrence offset is  86260 next occurrence offset is  3456564
+Found duplicate value    "7A4ABE30"
+1st occurrence offset is  90140 next occurrence offset is  282496
+Found duplicate value    "3CD1F043"
+1st occurrence offset is  91892 next occurrence offset is  1351456
+Found duplicate value    "84835706"
+1st occurrence offset is  95272 next occurrence offset is  1719284
+Found duplicate value    "9F6A5926"
+1st occurrence offset is  98684 next occurrence offset is  3080612
+Found duplicate value    "823B673D"
+1st occurrence offset is  99564 next occurrence offset is  2616204
+Found duplicate value    "9768BD3E"
+1st occurrence offset is  100972 next occurrence offset is  2188468
+Found duplicate value    "E0DA4715"
+1st occurrence offset is  110436 next occurrence offset is  3186528
+Found duplicate value    "FD673074"
+1st occurrence offset is  119616 next occurrence offset is  371668
+Found duplicate value    "96417656"
+1st occurrence offset is  120196 next occurrence offset is  3255136
+Found duplicate value    "5C22A67F"
+1st occurrence offset is  146432 next occurrence offset is  1749016
+Found duplicate value    "FE585F28"
+1st occurrence offset is  156708 next occurrence offset is  3747000
+Found duplicate value    "0DF3855A"
+1st occurrence offset is  170640 next occurrence offset is  210684
+Found duplicate value    "67C51874"
+1st occurrence offset is  187428 next occurrence offset is  2096768
+Found duplicate value    "C99E3A44"
+1st occurrence offset is  208656 next occurrence offset is  1326272
+Found duplicate value    "831A991A"
+1st occurrence offset is  212732 next occurrence offset is  3366596
+Found duplicate value    "39C17B70"
+1st occurrence offset is  216284 next occurrence offset is  3919092
+Found duplicate value    "DBD0D127"
+1st occurrence offset is  241332 next occurrence offset is  1224592
+Found duplicate value    "34BC4B5E"
+1st occurrence offset is  253216 next occurrence offset is  1517876
+Found duplicate value    "8F14D470"
+1st occurrence offset is  260968 next occurrence offset is  2297772
+Found duplicate value    "9185D82D"
+1st occurrence offset is  285500 next occurrence offset is  3962996
+Found duplicate value    "10058412"
+1st occurrence offset is  307952 next occurrence offset is  1144724
+Found duplicate value    "972DC704"
+1st occurrence offset is  317292 next occurrence offset is  3304852
+Found duplicate value    "0691170E"
+1st occurrence offset is  317340 next occurrence offset is  1476100
+Found duplicate value    "C7C20564"
+1st occurrence offset is  330428 next occurrence offset is  3303192
+Found duplicate value    "E6E67174"
+1st occurrence offset is  331896 next occurrence offset is  3763468
+Found duplicate value    "F7685965"
+1st occurrence offset is  333516 next occurrence offset is  644560
+Found duplicate value    "2049162E"
+1st occurrence offset is  347832 next occurrence offset is  1810744
+Found duplicate value    "2CB62962"
+1st occurrence offset is  354588 next occurrence offset is  1556856
+Found duplicate value    "CD503D45"
+1st occurrence offset is  357708 next occurrence offset is  498328
+Found duplicate value    "C2D7146F"
+1st occurrence offset is  366828 next occurrence offset is  1561380
+Found duplicate value    "B97DD042"
+1st occurrence offset is  367440 next occurrence offset is  3618720
+Found duplicate value    "DA455D7E"
+1st occurrence offset is  371720 next occurrence offset is  1681224
+Found duplicate value    "CE223C31"
+1st occurrence offset is  380176 next occurrence offset is  994412
+Found duplicate value    "5D645C3A"
+1st occurrence offset is  382564 next occurrence offset is  2202892
+Found duplicate value    "0DC59823"
+1st occurrence offset is  384960 next occurrence offset is  3948932
+Found duplicate value    "C934DD35"
+1st occurrence offset is  403512 next occurrence offset is  3825752
+Found duplicate value    "85BAA671"
+1st occurrence offset is  417696 next occurrence offset is  3321232
+Found duplicate value    "005BD737"
+1st occurrence offset is  434512 next occurrence offset is  1497192
+Found duplicate value    "BE11F61E"
+1st occurrence offset is  443636 next occurrence offset is  1848076
+Found duplicate value    "DFD74F16"
+1st occurrence offset is  451768 next occurrence offset is  554424
+Found duplicate value    "6B65CF5D"
+1st occurrence offset is  452020 next occurrence offset is  1844672
+Found duplicate value    "AD805F16"
+1st occurrence offset is  453228 next occurrence offset is  3634292
+Found duplicate value    "0883FD6F"
+1st occurrence offset is  460808 next occurrence offset is  2111188
+Found duplicate value    "6FB6C41B"
+1st occurrence offset is  467912 next occurrence offset is  747816
+Found duplicate value    "AD3C0323"
+1st occurrence offset is  468936 next occurrence offset is  1236868
+Found duplicate value    "DA29A30F"
+1st occurrence offset is  477604 next occurrence offset is  879152
+Found duplicate value    "53A45B6A"
+1st occurrence offset is  486304 next occurrence offset is  860544
+Found duplicate value    "10200F7F"
+1st occurrence offset is  487308 next occurrence offset is  2086276
+Found duplicate value    "488A8743"
+1st occurrence offset is  490844 next occurrence offset is  2752464
+Found duplicate value    "FB274B57"
+1st occurrence offset is  495820 next occurrence offset is  3777536
+Found duplicate value    "739CA93A"
+1st occurrence offset is  500976 next occurrence offset is  1031596
+Found duplicate value    "18628A19"
+1st occurrence offset is  514044 next occurrence offset is  3121352
+Found duplicate value    "D0BA4067"
+1st occurrence offset is  517496 next occurrence offset is  612768
+Found duplicate value    "DAB19921"
+1st occurrence offset is  520160 next occurrence offset is  3916412
+Found duplicate value    "D2B57E5A"
+1st occurrence offset is  520296 next occurrence offset is  3365392
+Found duplicate value    "96FC1D75"
+1st occurrence offset is  534712 next occurrence offset is  2161544
+Found duplicate value    "15440847"
+1st occurrence offset is  578292 next occurrence offset is  792764
+Found duplicate value    "838FB731"
+1st occurrence offset is  580076 next occurrence offset is  3275200
+Found duplicate value    "4EC3FC5D"
+1st occurrence offset is  580964 next occurrence offset is  2685320
+Found duplicate value    "00A2E922"
+1st occurrence offset is  622340 next occurrence offset is  3034136
+Found duplicate value    "D8C6B656"
+1st occurrence offset is  627800 next occurrence offset is  2354788
+Found duplicate value    "0140DE49"
+1st occurrence offset is  629216 next occurrence offset is  982092
+Found duplicate value    "625FA075"
+1st occurrence offset is  633228 next occurrence offset is  2212840
+Found duplicate value    "C0B5B250"
+1st occurrence offset is  637084 next occurrence offset is  2330148
+Found duplicate value    "7897B632"
+1st occurrence offset is  641656 next occurrence offset is  2908844
+Found duplicate value    "74BE485D"
+1st occurrence offset is  643088 next occurrence offset is  1915668
+Found duplicate value    "FEB81D79"
+1st occurrence offset is  649268 next occurrence offset is  3186332
+Found duplicate value    "B489267E"
+1st occurrence offset is  658804 next occurrence offset is  3823756
+Found duplicate value    "1ED29C56"
+1st occurrence offset is  664796 next occurrence offset is  3891276
+Found duplicate value    "8845930F"
+1st occurrence offset is  669920 next occurrence offset is  2994172
+Found duplicate value    "DE996162"
+1st occurrence offset is  685604 next occurrence offset is  759512
+Found duplicate value    "BB418C21"
+1st occurrence offset is  686064 next occurrence offset is  1296620
+Found duplicate value    "22341062"
+1st occurrence offset is  710224 next occurrence offset is  1826968
+Found duplicate value    "006BC256"
+1st occurrence offset is  711100 next occurrence offset is  1972732
+Found duplicate value    "D5FEB03A"
+1st occurrence offset is  726164 next occurrence offset is  2963580
+Found duplicate value    "C273AD51"
+1st occurrence offset is  730612 next occurrence offset is  3619112
+Found duplicate value    "88316E1F"
+1st occurrence offset is  731668 next occurrence offset is  2770224
+Found duplicate value    "6D7F1A3B"
+1st occurrence offset is  759604 next occurrence offset is  2766268
+Found duplicate value    "DD8BBD70"
+1st occurrence offset is  790100 next occurrence offset is  1733608
+Found duplicate value    "10ED4751"
+1st occurrence offset is  822996 next occurrence offset is  1272768
+Found duplicate value    "EAB7035C"
+1st occurrence offset is  824944 next occurrence offset is  2154868
+Found duplicate value    "BA0BE471"
+1st occurrence offset is  831240 next occurrence offset is  1630180
+Found duplicate value    "610F1C51"
+1st occurrence offset is  837428 next occurrence offset is  2307296
+Found duplicate value    "B3452352"
+1st occurrence offset is  839024 next occurrence offset is  2879684
+Found duplicate value    "D979617B"
+1st occurrence offset is  851904 next occurrence offset is  1495380
+Found duplicate value    "C0633A76"
+1st occurrence offset is  855844 next occurrence offset is  3519156
+Found duplicate value    "C719C473"
+1st occurrence offset is  861104 next occurrence offset is  1661104
+Found duplicate value    "1FC6F709"
+1st occurrence offset is  870220 next occurrence offset is  1738412
+Found duplicate value    "32F5356E"
+1st occurrence offset is  873396 next occurrence offset is  1988996
+Found duplicate value    "6667AB6C"
+1st occurrence offset is  888384 next occurrence offset is  1376112
+Found duplicate value    "FDA11F50"
+1st occurrence offset is  895884 next occurrence offset is  2380896
+Found duplicate value    "26851B63"
+1st occurrence offset is  897360 next occurrence offset is  3749316
+Found duplicate value    "BCF4C376"
+1st occurrence offset is  902120 next occurrence offset is  1671652
+Found duplicate value    "B3240820"
+1st occurrence offset is  924028 next occurrence offset is  1001692
+Found duplicate value    "867F5B43"
+1st occurrence offset is  930884 next occurrence offset is  3099484
+Found duplicate value    "5CE4994F"
+1st occurrence offset is  971164 next occurrence offset is  1028904
+Found duplicate value    "CA05450E"
+1st occurrence offset is  971288 next occurrence offset is  3063232
+Found duplicate value    "AD9AA757"
+1st occurrence offset is  972584 next occurrence offset is  1641440
+Found duplicate value    "0A79704E"
+1st occurrence offset is  1015068 next occurrence offset is  2576212
+Found duplicate value    "DAC12D3C"
+1st occurrence offset is  1016008 next occurrence offset is  2542960
+Found duplicate value    "E3A1273C"
+1st occurrence offset is  1047768 next occurrence offset is  1911848
+Found duplicate value    "47D05517"
+1st occurrence offset is  1059996 next occurrence offset is  1099128
+Found duplicate value    "C2C80C59"
+1st occurrence offset is  1061196 next occurrence offset is  2116020
+Found duplicate value    "8ACA8616"
+1st occurrence offset is  1092936 next occurrence offset is  1340636
+Found duplicate value    "7EF46D0B"
+1st occurrence offset is  1095784 next occurrence offset is  1798832
+Found duplicate value    "54281E73"
+1st occurrence offset is  1113456 next occurrence offset is  1780824
+Found duplicate value    "B905CB19"
+1st occurrence offset is  1132356 next occurrence offset is  3254700
+Found duplicate value    "B79B8F60"
+1st occurrence offset is  1155912 next occurrence offset is  3196112
+Found duplicate value    "146DB425"
+1st occurrence offset is  1158716 next occurrence offset is  3998880
+Found duplicate value    "0EBDFB12"
+1st occurrence offset is  1162588 next occurrence offset is  1208752
+Found duplicate value    "43161C47"
+1st occurrence offset is  1182496 next occurrence offset is  3302060
+Found duplicate value    "B30D0C43"
+1st occurrence offset is  1196484 next occurrence offset is  3423464
+Found duplicate value    "AFC96D73"
+1st occurrence offset is  1219240 next occurrence offset is  2413180
+Found duplicate value    "50109A41"
+1st occurrence offset is  1251304 next occurrence offset is  3056840
+Found duplicate value    "0A659F7A"
+1st occurrence offset is  1274184 next occurrence offset is  3152020
+Found duplicate value    "F9D6C73B"
+1st occurrence offset is  1294056 next occurrence offset is  1463940
+Found duplicate value    "20A83777"
+1st occurrence offset is  1294348 next occurrence offset is  2386948
+Found duplicate value    "0A78CF6A"
+1st occurrence offset is  1354100 next occurrence offset is  2431004
+Found duplicate value    "28EA6F79"
+1st occurrence offset is  1406344 next occurrence offset is  1513772
+Found duplicate value    "DBEA200F"
+1st occurrence offset is  1408984 next occurrence offset is  2739972
+Found duplicate value    "48602A7D"
+1st occurrence offset is  1428984 next occurrence offset is  3412504
+Found duplicate value    "FDB61F05"
+1st occurrence offset is  1461820 next occurrence offset is  1688128
+Found duplicate value    "E6B2B151"
+1st occurrence offset is  1469608 next occurrence offset is  2937920
+Found duplicate value    "A404893A"
+1st occurrence offset is  1479096 next occurrence offset is  3112592
+Found duplicate value    "BBF65879"
+1st occurrence offset is  1504148 next occurrence offset is  2748788
+Found duplicate value    "C059FB39"
+1st occurrence offset is  1511672 next occurrence offset is  2744260
+Found duplicate value    "3FF1AF3E"
+1st occurrence offset is  1566888 next occurrence offset is  3076040
+Found duplicate value    "A4585755"
+1st occurrence offset is  1572768 next occurrence offset is  2895800
+Found duplicate value    "E00BA276"
+1st occurrence offset is  1591196 next occurrence offset is  2532292
+Found duplicate value    "C7A3AC79"
+1st occurrence offset is  1591216 next occurrence offset is  2680756
+Found duplicate value    "423B955E"
+1st occurrence offset is  1593892 next occurrence offset is  2239276
+Found duplicate value    "729D9F6E"
+1st occurrence offset is  1596988 next occurrence offset is  2831128
+Found duplicate value    "9894CF11"
+1st occurrence offset is  1598068 next occurrence offset is  3964400
+Found duplicate value    "A5F9B976"
+1st occurrence offset is  1602888 next occurrence offset is  3226200
+Found duplicate value    "5C7AB101"
+1st occurrence offset is  1617292 next occurrence offset is  3942608
+Found duplicate value    "AD327A12"
+1st occurrence offset is  1631660 next occurrence offset is  1901760
+Found duplicate value    "DE9EBB66"
+1st occurrence offset is  1677488 next occurrence offset is  2563112
+Found duplicate value    "CF138331"
+1st occurrence offset is  1692572 next occurrence offset is  3254028
+Found duplicate value    "A6028B4E"
+1st occurrence offset is  1708164 next occurrence offset is  1751724
+Found duplicate value    "855BC110"
+1st occurrence offset is  1722900 next occurrence offset is  3956660
+Found duplicate value    "0F320C70"
+1st occurrence offset is  1731268 next occurrence offset is  3506116
+Found duplicate value    "EB107400"
+1st occurrence offset is  1773292 next occurrence offset is  2348640
+Found duplicate value    "BDB27F29"
+1st occurrence offset is  1792780 next occurrence offset is  3874000
+Found duplicate value    "1EC56877"
+1st occurrence offset is  1792796 next occurrence offset is  2669284
+Found duplicate value    "52AD4C0F"
+1st occurrence offset is  1815760 next occurrence offset is  2994220
+Found duplicate value    "3DE85057"
+1st occurrence offset is  1845116 next occurrence offset is  3953624
+Found duplicate value    "E49C6549"
+1st occurrence offset is  1846708 next occurrence offset is  1956072
+Found duplicate value    "5B8CFB00"
+1st occurrence offset is  1847076 next occurrence offset is  1894464
+Found duplicate value    "82C4C725"
+1st occurrence offset is  1860224 next occurrence offset is  3280100
+Found duplicate value    "9C70310F"
+1st occurrence offset is  1869752 next occurrence offset is  2102252
+Found duplicate value    "3FC25227"
+1st occurrence offset is  1884188 next occurrence offset is  3925108
+Found duplicate value    "0D64D12C"
+1st occurrence offset is  1888188 next occurrence offset is  2316340
+Found duplicate value    "8A1CAA47"
+1st occurrence offset is  1890512 next occurrence offset is  2649640
+Found duplicate value    "0E94A210"
+1st occurrence offset is  1927244 next occurrence offset is  2931852
+Found duplicate value    "A4F6C447"
+1st occurrence offset is  1936640 next occurrence offset is  3336908
+Found duplicate value    "BD9E8A23"
+1st occurrence offset is  1959316 next occurrence offset is  2638368
+Found duplicate value    "36C0BA3B"
+1st occurrence offset is  1981664 next occurrence offset is  2804652
+Found duplicate value    "3979C45B"
+1st occurrence offset is  1997816 next occurrence offset is  2114416
+Found duplicate value    "C0A6E853"
+1st occurrence offset is  2020928 next occurrence offset is  3626928
+Found duplicate value    "17547712"
+1st occurrence offset is  2038748 next occurrence offset is  2680784
+Found duplicate value    "EDF71F0A"
+1st occurrence offset is  2039376 next occurrence offset is  3945012
+Found duplicate value    "8F375409"
+1st occurrence offset is  2040524 next occurrence offset is  2934784
+Found duplicate value    "8EA6547B"
+1st occurrence offset is  2042284 next occurrence offset is  2288436
+Found duplicate value    "F2491716"
+1st occurrence offset is  2049492 next occurrence offset is  3031992
+Found duplicate value    "621DA413"
+1st occurrence offset is  2050496 next occurrence offset is  2362188
+Found duplicate value    "E777042F"
+1st occurrence offset is  2053120 next occurrence offset is  3711280
+Found duplicate value    "007A2F65"
+1st occurrence offset is  2067136 next occurrence offset is  2795540
+Found duplicate value    "D68B3A40"
+1st occurrence offset is  2074616 next occurrence offset is  2443844
+Found duplicate value    "017FB84D"
+1st occurrence offset is  2078760 next occurrence offset is  3360548
+Found duplicate value    "BE539D32"
+1st occurrence offset is  2080736 next occurrence offset is  3279280
+Found duplicate value    "706D2425"
+1st occurrence offset is  2125488 next occurrence offset is  2696520
+Found duplicate value    "489E9222"
+1st occurrence offset is  2145228 next occurrence offset is  3386408
+Found duplicate value    "E3ECA63F"
+1st occurrence offset is  2175704 next occurrence offset is  2300832
+Found duplicate value    "7EE3243E"
+1st occurrence offset is  2177576 next occurrence offset is  2346492
+Found duplicate value    "65FACC06"
+1st occurrence offset is  2189544 next occurrence offset is  3912172
+Found duplicate value    "EF33795C"
+1st occurrence offset is  2198060 next occurrence offset is  2928352
+Found duplicate value    "E432A93F"
+1st occurrence offset is  2204176 next occurrence offset is  3181948
+Found duplicate value    "4808E72B"
+1st occurrence offset is  2233704 next occurrence offset is  2433880
+Found duplicate value    "E40E5202"
+1st occurrence offset is  2234084 next occurrence offset is  3000124
+Found duplicate value    "2DA63520"
+1st occurrence offset is  2241532 next occurrence offset is  3236724
+Found duplicate value    "5440B176"
+1st occurrence offset is  2277908 next occurrence offset is  3124644
+Found duplicate value    "CE7DC907"
+1st occurrence offset is  2292236 next occurrence offset is  3329620
+Found duplicate value    "C12CB807"
+1st occurrence offset is  2328808 next occurrence offset is  2464948
+Found duplicate value    "74DDDC13"
+1st occurrence offset is  2331396 next occurrence offset is  3330124
+Found duplicate value    "2EA8E51E"
+1st occurrence offset is  2339772 next occurrence offset is  3235284
+Found duplicate value    "5E3AC62B"
+1st occurrence offset is  2385512 next occurrence offset is  3112916
+Found duplicate value    "17E6AF19"
+1st occurrence offset is  2398844 next occurrence offset is  3671388
+Found duplicate value    "0793A764"
+1st occurrence offset is  2427068 next occurrence offset is  3760612
+Found duplicate value    "C4F18713"
+1st occurrence offset is  2489828 next occurrence offset is  3523268
+Found duplicate value    "961D3838"
+1st occurrence offset is  2518476 next occurrence offset is  3932480
+Found duplicate value    "EDD14344"
+1st occurrence offset is  2521616 next occurrence offset is  2525784
+Found duplicate value    "220D6012"
+1st occurrence offset is  2542264 next occurrence offset is  3481928
+Found duplicate value    "71078E5B"
+1st occurrence offset is  2556976 next occurrence offset is  3523216
+Found duplicate value    "3831A634"
+1st occurrence offset is  2582404 next occurrence offset is  3268832
+Found duplicate value    "0831C130"
+1st occurrence offset is  2586416 next occurrence offset is  2774584
+Found duplicate value    "30A64328"
+1st occurrence offset is  2600520 next occurrence offset is  2971716
+Found duplicate value    "8547D52D"
+1st occurrence offset is  2630436 next occurrence offset is  3153848
+Found duplicate value    "AA384A0C"
+1st occurrence offset is  2637736 next occurrence offset is  2733724
+Found duplicate value    "E9317D72"
+1st occurrence offset is  2666884 next occurrence offset is  2944188
+Found duplicate value    "B6115F40"
+1st occurrence offset is  2716784 next occurrence offset is  3141832
+Found duplicate value    "EDFA9265"
+1st occurrence offset is  2723460 next occurrence offset is  2791140
+Found duplicate value    "6E319F67"
+1st occurrence offset is  2783532 next occurrence offset is  3687708
+Found duplicate value    "9EECF914"
+1st occurrence offset is  2793128 next occurrence offset is  3433684
+Found duplicate value    "AFBD5C30"
+1st occurrence offset is  2838160 next occurrence offset is  3070416
+Found duplicate value    "F227652D"
+1st occurrence offset is  2906324 next occurrence offset is  3960128
+Found duplicate value    "DE20C24A"
+1st occurrence offset is  2949080 next occurrence offset is  3289416
+Found duplicate value    "77CAF71B"
+1st occurrence offset is  2951768 next occurrence offset is  3006372
+Found duplicate value    "16008658"
+1st occurrence offset is  3044316 next occurrence offset is  3575744
+Found duplicate value    "939A847D"
+1st occurrence offset is  3066624 next occurrence offset is  3648348
+Found duplicate value    "D998DE1F"
+1st occurrence offset is  3111116 next occurrence offset is  3570988
+Found duplicate value    "B063972B"
+1st occurrence offset is  3170380 next occurrence offset is  3442840
+Found duplicate value    "C12CC93A"
+1st occurrence offset is  3237168 next occurrence offset is  3856916
+Found duplicate value    "F2FBA849"
+1st occurrence offset is  3258948 next occurrence offset is  3705412
+Found duplicate value    "8400BA6A"
+1st occurrence offset is  3263720 next occurrence offset is  3454080
+Found duplicate value    "16C18846"
+1st occurrence offset is  3326932 next occurrence offset is  3729112
+Found duplicate value    "C2C24A2D"
+1st occurrence offset is  3417412 next occurrence offset is  3940736
+Found duplicate value    "A8B15067"
+1st occurrence offset is  3437128 next occurrence offset is  3981396
+Found duplicate value    "DEC98A12"
+1st occurrence offset is  3469884 next occurrence offset is  3850900
+Found duplicate value    "D192136E"
+1st occurrence offset is  3509696 next occurrence offset is  3652740
+Found duplicate value    "331D7C5E"
+1st occurrence offset is  3755292 next occurrence offset is  3878060
+Found duplicate value    "F9572924"
+1st occurrence offset is  3845144 next occurrence offset is  3886396
+There were 233 duplicate dword values in a file
